@@ -112,8 +112,6 @@ print(equal(c(t),k(t)))
 
 
 
-
-
 def Backtracking(list, last, goal):
     if goal ==0:
         return True, [], []
@@ -151,6 +149,8 @@ sum = 0
 S = [1,2,4,6,7,8,10]
 #[1,2,3,4,5]
 #[2,4,5,9,12]
+#[1,2,4,6,7,8,10]
+#[1,2,3,4,5,6,7]
 
 for i in range(len(S)):
     sum += S[i]
@@ -161,7 +161,6 @@ if a:
     print('Solution:',s,l)
 else:
     print('There is no solution')    
-    
     
     
     
