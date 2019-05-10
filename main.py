@@ -112,6 +112,8 @@ print(equal(c(t),k(t)))
 
 
 
+
+
 def Backtracking(list, last, goal):
     if goal ==0:
         return True, [], []
@@ -125,13 +127,17 @@ def Backtracking(list, last, goal):
         temp = list[:last]
         for i in range(len(temp)):
             newlist.append(list[i])
+        print(newlist)
         for i in range(len(newlist)):
+            #x = i+1
+            #print('N',i,x)
             for x in range(len(newlist)):
-                if x < len(newlist) and i < len(newlist):
+                if x < len(newlist) and i < len(newlist) and i != x:
                     if newlist[i] == newlist[x]:
-                        print(newlist)
-                        newlist.pop(i)
-                        print(newlist)
+                        #print(i,x)
+                        #print(newlist)
+                        newlist.pop(x)
+                        #print(newlist)
             for j in range(len(subset)):
                 if i < len(newlist):                   
                     if newlist[i] == subset[j]:
@@ -145,8 +151,7 @@ sum = 0
 S = [1,2,4,6,7,8,10]
 #[1,2,3,4,5]
 #[2,4,5,9,12]
-#[2,4,5,9,12]
-# [2,4,5,9,12]
+
 for i in range(len(S)):
     sum += S[i]
 goal = sum / 2
@@ -156,6 +161,7 @@ if a:
     print('Solution:',s,l)
 else:
     print('There is no solution')    
+    
     
     
     
